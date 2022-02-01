@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Qual o meu nome?</h1>
+    <script>
+        var n = String(window.prompt('Digite seu nome: '))
+        
+        if (n.length < 1) {
+            document.write('Por Favor Digite Algo!')
+
+        }   else {
+            document.write(`<h2>Seu nome é ${n}<br></h2>`)
+            document.write(`E ele tem ${n.length} letras <br>`)
+            document.write(`Em letras maiúsculas ele fica assim ${nome.toUpperCase()} <br>`)
+            document.write(`E em minúsculas fica assim ${n.toLowerCase()} <br>`) 
+        }
+
+    </script>
+</body>
+</html>
