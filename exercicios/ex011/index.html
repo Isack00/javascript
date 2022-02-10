@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+</head>
+<body>
+    <h1>Você é estrangeiro?</h1>
+    <label>Qual o seu país?</label>
+    <input type="text" name="pais" id="pais">
+    <input type="submit" value="Descubra" id="resul" onclick="psubmit()">
+    <div id="res"></div>
+
+    <script>
+        function psubmit() {
+        var rpais = document.getElementById('pais')
+        var res = document.getElementById('res')
+        var p = String(rpais.value)
+        res.innerHTML = `<p>Você nasceu em ${p}</p>`
+        if (p == 'brasil') {
+            res.innerHTML += 'Você é um brasileiro'
+        } else if (p == 'Brasil') {
+            res.innerHTML += 'Você é um brasileiro'
+        } else {
+            res.innerHTML += '<p>Você é um estrangeiro</p>'
+        }
+    }
+
+    </script>
+</body>
+</html>
