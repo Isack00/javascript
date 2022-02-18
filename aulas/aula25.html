@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let data = new Date()
+        let dia = data.getDate()
+        let mes = data.getMonth()
+        let ano = data.getFullYear()
+        let diaSemana = data.getDay()
+
+        let horas = data.getHours()
+        let minutos = data.getMinutes()
+        let segundos = data.getSeconds()
+
+        let meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+
+        let semanas = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+
+
+        document.write(semanas[diaSemana] + ', ' + dia + ' de ' + meses[mes] + ' de ' + ano + '<br>')
+        document.write(horas + ':' + minutos + ':' + segundos)
+
+    </script>
+
+</body>
+</html>

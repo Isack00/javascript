@@ -1,0 +1,41 @@
+div#calcular {
+    width: 500px;
+    height: 800px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 2em;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.405);
+    background-color: gold;
+}
+
+div#calcular input {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+div#calcular button {
+    width: 350px;
+    height: 60px;
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    color: gold;
+    cursor: pointer;
+}
+
+div#resultado_do_imc {
+    background-color: black;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.405);
+    color: gold;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 350px;
+    height: 230px;
+}

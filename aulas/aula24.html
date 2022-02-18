@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        input, label{
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro - 1">
+        <label>Senha</label>
+        <input type="password" id="fSenha " value="123">
+        <input type="submit" id="btEnviar" value="Enviar">
+    </form>
+    <hr>
+
+    <script>
+
+        document.write(document.getElementById('curso1').elements[0].value)
+
+        let formulario = document.forms[0]
+        let elementos = formulario.elements
+
+        /*for(let indice = 0 ; indice < elementos.length-1 ; indice++){
+
+            elementos[indice].style.backgroundColor = '#ddd'
+            elementos[indice].value = 'Funcionou kkkk'
+
+        }
+
+        document.write(document.forms[0].elements[1].value) */
+
+        
+
+    </script>
+
+</body>
+</html>

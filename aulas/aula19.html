@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let numero 
+
+        try {
+            
+            numero = prompt('Digite um numero menor que 10') 
+            if (numero > 10) {
+                throw new Error('Valor Inválido');
+            }
+
+        } catch (error) {
+            document.write('Error: ' + error.message)
+            console.log('Idiota você errou: ' + error.message)
+            numero = ''
+        }
+
+    </script>
+
+</body>
+</html>
