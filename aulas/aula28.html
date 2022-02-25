@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dv1 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body onload="compremento()">
+
+    <div id="dv1" onmouseover="mudarCor(this, '#f00')" onmouseout="mudarCor(this, '#fff')"></div>
+    <br>
+    <button onclick="mudarCor(document.getElementById('dv1'), '#00f')">Clique em mim!</button>
+    
+    <script>
+
+        function compremento() {
+            let data = new Date()
+            let momentoDia = data.getHours()
+            let txt=''
+
+            if (momentoDia < 12) {
+                txt = 'Bom dia'
+            } else if (momentoDia < 18){
+                txt = 'Boa tarde'
+            } else{
+                txt = 'Boa noite'
+            }
+            alert(txt)
+        }
+
+        function mudarCor(obj, cor) {
+            obj.style.backgroundColor = cor
+        }
+
+    </script>
+
+</body>
+</html>

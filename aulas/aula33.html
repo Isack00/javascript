@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #jogador {
+            position: absolute;
+            top: 0;
+            left: 120px;
+            background-color: #00f;
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="jogador"></div>
+    <button id="inicia">Iniciar</button>
+    <button id="para">Parar</button>
+
+    <script>
+
+        let jogador = document.getElementById('jogador')
+        let velocidade
+        let direcaoX
+        let direcaoY
+        let posicaoX
+        let posicaoY
+        let animacao
+        let parado = 0
+        let movimentando = 1
+        let estadoQuadrado = movimentando
+        let inicia = document.getElementById('inicia')
+        let para = document.getElementById('para')
+
+        function moverParar() {
+            if (estadoQuadrado) {
+                estadoQuadrado = parado
+                parar()
+            } else {
+                estadoQuadrado = movimentando
+                iniciar()
+            }
+        }
+
+        function iniciar() {
+            velocidade = 5
+            direcaoX = 1
+            direcaoY = 0
+            posicaoX = 120
+            posicaoY = 0
+            game()
+        }
+
+        function parar() {
+            cancelAnimationFrame(animacao)
+            velocidade = 0
+            inicia.addEventListener('click', iniciar)
+            jogador.addEventListener('click', iniciar)
+        }
+
+        function game() {
+            velocidade = 5
+            posicaoX += (direcaoX * velocidade)
+            jogador.style.left = posicaoX+'px'
+            animacao = requestAnimationFrame(game)
+            if(posicaoX > 1230) {
+                direcaoX =- 1
+            } else if ( posicaoX <= 120) {
+                direcaoX =+ 1
+            }
+            inicia.removeEventListener('click', iniciar)
+            jogador.removeEventListener('click', iniciar)
+        }
+
+        para.addEventListener('click', parar)
+        inicia.addEventListener('click', iniciar)
+        jogador.addEventListener('click', moverParar)
+
+        
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #carro {
+            width: 200px;
+            height: 379px;
+        }
+
+        .c1 {
+            background-image: url('carro.png');
+            background-size: 200px;
+            background-repeat: no-repeat;
+        }
+
+        .c2 {
+            background-image: url('carro.png');
+            background-size: 150px;
+            background-repeat: no-repeat;
+        }
+
+        .c3 {
+            background-image: url('carro.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button onclick="trocaCarro(1)">Carro 1</button>
+    <button onclick="trocaCarro(2)">Carro 2</button>
+    <button onclick="trocaCarro(3)">Carro 3</button>
+    <button onclick="removerCarro()">Remover carro</button>
+    <button onclick="verificarCarro()">Verificar carro</button>
+    <div id="carro"></div>
+
+    <script>
+        function trocaCarro(c){
+            let carro = document.getElementById('carro')
+            if (c == 1) {
+                carro.setAttribute('class', 'c1')
+            } else if (c == 2) {
+                carro.setAttribute('class', 'c2')
+            } else if (c == 3) {
+                carro.setAttribute('class', 'c3')
+            } 
+        }
+
+        function verificarCarro() {
+            carro = document.getElementById('carro')
+            if (carro.hasAttribute('class')) {
+                alert('Atributo class já adicionado')
+            } else {
+                alert('Atributo class ainda não adicionado')
+            }
+        }
+
+        function removerCarro() {
+            document.getElementById('carro').removeAttribute('class')
+        }
+        
+
+    </script>
+
+</body>
+</html>
